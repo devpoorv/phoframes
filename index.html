@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070706">
+    <meta name="description" content="PHOFRAMES — Your memories, framed.">
+    <title>PHOFRAMES — Your memories, framed.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="luxury-shell" id="site-shell">
+      <div class="ambient-noise" aria-hidden="true"></div>
+      <div class="cursor-halo" aria-hidden="true"></div>
+
+      <section class="screen intro-screen is-active" data-screen="intro">
+        <div class="intro-orbit orbit-one" aria-hidden="true"></div>
+        <div class="intro-orbit orbit-two" aria-hidden="true"></div>
+        <div class="dust-field" aria-hidden="true"></div>
+        <div class="intro-brand">
+          <p class="eyebrow">✦ THE MEMORY HOUSE</p>
+          <img class="hero-logo" src="phoframes-logo.png" alt="PHOFRAMES — Your memories, framed.">
+          <div class="story-window" aria-live="polite"><p class="story-line is-revealing" id="story-line">Some moments deserve more than a gallery.</p></div>
+          <p class="brand-origin">PHOFRAMES began with one belief: memories deserve more than being buried inside a phone.</p>
+        </div>
+        <aside class="intro-review">
+          <span>★★★★★</span>
+          <p>Preview review copy — add your real customer voices here.</p>
+          <small>READY FOR YOUR REVIEWS</small>
+        </aside>
+        <button class="explore-button" type="button" data-go="choice">EXPLORE PHOFRAMES <span>↓</span></button>
+      </section>
+
+      <section class="screen choice-screen" data-screen="choice" aria-label="Choose your experience">
+        <header class="choice-header">
+          <button class="wordmark-button" type="button" data-go="intro" aria-label="Return to PHOFRAMES introduction"><img src="phoframes-logo.png" alt="PHOFRAMES"></button>
+          <p class="eyebrow">CHOOSE YOUR EXPERIENCE</p>
+        </header>
+        <div class="experience-grid">
+          <button class="experience-card custom-card" type="button" data-go="custom">
+            <span class="card-index">01</span>
+            <div class="experience-visual"><div class="frame-visual frame-gold"><div class="frame-matte"><div class="frame-art"><span class="frame-label">A memory, made tangible</span></div></div></div></div>
+            <div class="experience-copy"><span class="eyebrow">MADE FOR YOUR MOMENT</span><h1>Customized<br><em>frames.</em></h1><p>Tell us the feeling behind your photo. We’ll help you turn it into a piece worth keeping.</p><span class="card-cta">CREATE YOUR FRAME <b>↗</b></span></div>
+          </button>
+          <button class="experience-card store-card" type="button" data-go="store">
+            <span class="card-index">02</span>
+            <div class="experience-visual"><div class="frame-visual frame-black"><div class="frame-matte"><div class="frame-art"><span class="frame-label">Made to hold the moment</span></div></div></div></div>
+            <div class="experience-copy"><span class="eyebrow">READY TO MAKE YOURS</span><h1>Only<br><em>frames.</em></h1><p>Choose a finish, select your size, and give the picture its place.</p><span class="card-cta">SHOP THE COLLECTION <b>↗</b></span></div>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen store-screen" data-screen="store">
+        <header class="store-header">
+          <button class="back-button" type="button" data-go="choice">← BACK</button>
+          <button class="mini-brand" type="button" data-go="intro" aria-label="Return to PHOFRAMES introduction"><img src="phoframes-logo.png" alt="PHOFRAMES"></button>
+          <button class="bag-button" id="open-cart" type="button" aria-label="Open shopping bag">BAG <span id="cart-count">0</span></button>
+        </header>
+        <div class="store-hero">
+          <div class="store-hero-copy">
+            <p class="eyebrow">ONLY FRAMES</p>
+            <h1>Give the picture<br><em>its place.</em></h1>
+            <p>Choose a size, then take your favourite frame home — or keep collecting.</p>
+            <div class="size-strip" id="hero-size-strip"></div>
+            <div class="hero-frame-picker">
+              <p>Choose your size</p>
+              <div class="size-choice-row" id="hero-size-picker"></div>
+              <div class="hero-buy-row"><strong id="hero-price">₹149</strong><button id="hero-add" type="button">CHOOSE THIS FRAME</button></div>
+            </div>
+          </div>
+          <div class="feature-frame-wrap">
+            <div class="feature-frame" id="featured-frame"></div>
+            <div class="carousel-controls"><button id="previous-frame" type="button" aria-label="Previous frame">←</button><span id="carousel-index">01 / 04</span><button id="next-frame" type="button" aria-label="Next frame">→</button></div>
+          </div>
+        </div>
+        <section class="catalogue">
+          <div class="catalogue-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Pick the feeling.</h2></div><p>Every frame is ready to make a photograph feel considered.</p></div>
+          <div class="product-grid" id="product-grid"></div>
+        </section>
+      </section>
+
+      <section class="screen custom-screen" data-screen="custom">
+        <header class="store-header">
+          <button class="back-button" type="button" data-go="choice">← BACK</button>
+          <button class="mini-brand" type="button" data-go="intro" aria-label="Return to PHOFRAMES introduction"><img src="phoframes-logo.png" alt="PHOFRAMES"></button>
+        </header>
+        <div class="custom-stage">
+          <div class="custom-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="custom-frame"><div class="frame-visual frame-gold"><div class="frame-matte"><div class="frame-art"><span class="frame-label">Made only for your moment</span></div></div></div></div>
+          <div class="custom-copy"><p class="eyebrow">CUSTOMIZED FRAMES</p><h1>Make your<br><em>memory tangible.</em></h1><p>Tell us about the photo, the frame, and the moment. We’ll help you make it one worth holding on to.</p><a class="custom-cta" id="custom-whatsapp" href="#">GET YOUR FRAME NOW <span>◉</span></a><small>Opens WhatsApp to start your custom order.</small></div>
+          <article class="floating-review review-left"><p id="review-quote">“The frame felt like the final touch our picture was waiting for.”</p><span id="review-label">READY FOR YOUR REAL REVIEWS</span></article>
+          <article class="floating-review review-right"><p>Real customer photos and verified review cards can be added here when you share them.</p></article>
+        </div>
+        <div class="custom-process"><div><span>01</span><p>Share your photo</p></div><div><span>02</span><p>Choose your style</p></div><div><span>03</span><p>We make it yours</p></div></div>
+      </section>
+    </main>
+
+    <div class="overlay" id="cart-overlay" aria-hidden="true">
+      <button class="overlay-backdrop" type="button" data-close="cart" aria-label="Close shopping bag"></button>
+      <aside class="side-panel" aria-label="Shopping bag"><header class="panel-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping bag</h2></div><button class="close-button" type="button" data-close="cart" aria-label="Close">×</button></header><div class="cart-lines" id="cart-lines"></div><footer class="cart-footer"><div class="cart-total"><span>TOTAL</span><strong id="cart-total">₹0</strong></div><p>Delivery details are collected at checkout.</p><button class="primary-button full-button" id="begin-checkout" type="button">CONTINUE TO PAYMENT</button></footer></aside>
+    </div>
+
+    <div class="overlay" id="checkout-overlay" aria-hidden="true">
+      <button class="overlay-backdrop" type="button" data-close="checkout" aria-label="Close checkout"></button>
+      <aside class="side-panel checkout-panel" aria-label="Checkout"><header class="panel-header"><div><p class="eyebrow">SECURE ORDER REQUEST</p><h2 id="checkout-title">Your details</h2></div><button class="close-button" type="button" data-close="checkout" aria-label="Close">×</button></header><div id="checkout-content"></div></aside>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
