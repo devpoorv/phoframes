@@ -85,9 +85,16 @@
 .review-slot-single .customer-review-stars{font-size:.8rem}
 .size-guide{max-width:30rem;color:#b8a98e;font-size:.78rem;line-height:1.7;letter-spacing:normal}
 .social-footer{position:relative;z-index:2;padding:1.5rem 1.25rem 2rem;text-align:center;border-top:1px solid var(--line)}
-.social-footer a{display:inline-flex;max-width:100%;min-height:44px;flex-direction:column;gap:.55rem;color:var(--ivory);font-size:.8rem;line-height:1.7;text-decoration:none;overflow-wrap:anywhere}
-.social-footer span{font-size:.6rem;letter-spacing:.16em;color:#b8a98e}.social-footer b{font-weight:500;color:var(--gold)}
-.social-footer a:hover b{text-decoration:underline;text-underline-offset:.25rem}
-.social-footer a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+.social-caption{margin:0 0 .85rem;color:#b8a98e;font-family:var(--display);font-size:1rem;line-height:1.6;font-style:italic}
+.instagram-invitation{margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid var(--line)}
+.instagram-quote{margin:0 0 .9rem;color:var(--champagne);font-family:var(--display);font-size:clamp(1.05rem,3.8vw,1.35rem);font-style:italic;line-height:1.6;animation:instagram-quote-fade 12s ease-in-out infinite}
+.instagram-button{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;max-width:100%;min-height:48px;padding:.75rem 1.15rem;border:1px solid rgba(224,181,97,.55);border-radius:999px;background:linear-gradient(135deg,rgba(185,131,42,.16),rgba(27,22,14,.8));color:#e9c77f;font-family:var(--sans);font-size:.85rem;line-height:1.4;letter-spacing:.04em;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,228,161,.1);transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.instagram-button svg{width:24px;height:24px;flex-shrink:0;filter:drop-shadow(0 0 5px rgba(229,181,85,.18))}
+.instagram-arrow{font-size:1.1rem;opacity:.8}
+.instagram-button:hover{border-color:#e9c77f;background:rgba(185,131,42,.2);box-shadow:0 5px 22px rgba(185,131,42,.12);transform:translateY(-2px)}
+.instagram-button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+@keyframes instagram-quote-fade{0%,100%{opacity:.3}18%,82%{opacity:1}}
+@media(max-width:720px){.instagram-invitation{margin-top:1.5rem;text-align:center}.instagram-button{font-size:.8rem}.social-footer{padding:1.4rem 1rem 1.8rem}}
+@media(prefers-reduced-motion:reduce){.instagram-quote{animation:none}.instagram-button{transition:none}}
 @media(max-width:720px){.review-slot-single{width:min(21rem,100%);margin-top:1.1rem;min-height:17rem}.review-slot-single .customer-review-card{padding:1rem .65rem}.intro-screen.is-active.has-customer-reviews{gap:.25rem}.custom-screen.has-customer-reviews .review-slot-single{order:3}.size-guide{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.review-slot-single .customer-review-card{animation:none}}
