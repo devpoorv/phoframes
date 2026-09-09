@@ -21,9 +21,19 @@ const stories = [
   'Because your best moments deserve a place on your wall.',
 ];
 
-// Add customer-approved feedback here when supplied: { name, quote, rating }.
-// Ratings must be the customer's actual rating; never generate a rating.
-const reviews = [];
+// Feedback supplied by the shop owner; preserve its wording and ratings.
+const reviews = [
+  { name: 'Chinmay Sharma', rating: 5, quote: 'Frame quality kaafi premium lagi. Photo fit bhi perfect hua aur packing bhi safe thi. PHOFRAMES se first order tha, overall experience bahut accha raha.' },
+  { name: 'Ravi Sahu', rating: 4, quote: 'Design exactly website jaisa hi mila. Delivery thodi late hui, but product quality achhi hai. Frame ka finish classy lagta hai.' },
+  { name: 'Riya Gupta', rating: 5, quote: 'Bought this frame for my parents’ anniversary photo. It looks beautiful on the wall and feels sturdy too. Really happy with the purchase.' },
+  { name: 'Gaurav Patel', rating: 3, quote: 'Frame theek hai aur photo achhi lag rahi hai, but packaging aur better ho sakti thi. Product overall decent hai.' },
+  { name: 'Hemant Raikwar', rating: 5, quote: 'बहुत सुंदर फोटो फ्रेम मिला। फिनिशिंग साफ-सुथरी है और फोटो लगाने के बाद काफी प्रीमियम लुक आता है। पैकिंग भी अच्छी थी।' },
+  { name: 'shanti devi', rating: 4, quote: 'Maine gifting ke liye order kiya tha. Look kaafi elegant hai and receiver ko bhi pasand aaya. Price thoda aur competitive hota toh 5 star deta.' },
+  { name: 'aman yadav', rating: 5, quote: 'Honestly, I was impressed with the finishing. The frame looks more premium in person and the size was exactly as mentioned on the website.' },
+  { name: 'Ashish Patel', rating: 4, quote: 'Simple, elegant aur decent quality. Mere family photo ke saath bahut accha lag raha hai. Delivery experience bhi smooth raha.' },
+  { name: 'Ayushi Verma', rating: 3, quote: 'Product acha hai but mujhe colour website photo se thoda different laga. Quality satisfactory hai and frame strong feel hota hai.' },
+  { name: 'Aditya Singh', rating: 5, quote: 'घर की पुरानी फैमिली फोटो के लिए मंगाया था। फ्रेम लगाने के बाद फोटो का पूरा लुक बदल गया। अच्छी क्वालिटी और बढ़िया फिनिशिंग।' },
+];
 
 let selectedSizes = Object.fromEntries(products.map((product) => [product.id, 'A4']));
 let selectedCovers = Object.fromEntries(products.map((product) => [product.id, 'glass']));
