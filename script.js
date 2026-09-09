@@ -190,14 +190,14 @@ function updateCustomWhatsApp() {
 
 function rotateStory() {
   let index = 0;
-  setInterval(() => {
+  const line = $('#story-line');
+  line.classList.remove('is-revealing');
+  // Change the words only when the CSS fade reaches full transparency.
+  line.addEventListener('animationiteration', (event) => {
+    if (event.animationName !== 'hero-quote-fade') return;
     index = (index + 1) % stories.length;
-    const line = $('#story-line');
-    line.classList.remove('is-revealing');
-    void line.offsetWidth;
     line.textContent = stories[index];
-    line.classList.add('is-revealing');
-  }, 4200);
+  });
 }
 
 function rotateReview() {
