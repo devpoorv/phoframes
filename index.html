@@ -26,11 +26,8 @@
           <div class="story-window" aria-live="polite"><p class="story-line is-revealing" id="story-line">Some moments deserve more than a gallery.</p></div>
           <p class="brand-origin">PHOFRAMES began with one belief: memories deserve more than being buried inside a phone.</p>
         </div>
-        <aside class="intro-review">
-          <span>★★★★★</span>
-          <p>Preview review copy — add your real customer voices here.</p>
-          <small>READY FOR YOUR REVIEWS</small>
-        </aside>
+        <div class="customer-review-slot review-slot-top" data-review-slot="intro-top" hidden></div>
+        <div class="customer-review-slot review-slot-bottom" data-review-slot="intro-bottom" hidden></div>
         <button class="explore-button" type="button" data-go="choice">EXPLORE PHOFRAMES <span>↓</span></button>
       </section>
 
@@ -68,6 +65,8 @@
             <div class="hero-frame-picker">
               <p>Choose your size</p>
               <div class="size-choice-row" id="hero-size-picker"></div>
+              <div id="hero-cover-picker"></div>
+              <p class="photo-included">Photo print included. Share your photo on WhatsApp after ordering.</p>
               <div class="hero-buy-row"><strong id="hero-price">₹149</strong><button id="hero-add" type="button">CHOOSE THIS FRAME</button></div>
             </div>
           </div>
@@ -91,8 +90,8 @@
           <div class="custom-rings" aria-hidden="true"><i></i><i></i><i></i></div>
           <div class="custom-frame"><div class="frame-visual frame-gold"><div class="frame-matte"><div class="frame-art"><span class="frame-label">Made only for your moment</span></div></div></div></div>
           <div class="custom-copy"><p class="eyebrow">CUSTOMIZED FRAMES</p><h1>Make your<br><em>memory tangible.</em></h1><p>Tell us about the photo, the frame, and the moment. We’ll help you make it one worth holding on to.</p><a class="custom-cta" id="custom-whatsapp" href="#">GET YOUR FRAME NOW <span>◉</span></a><small>Opens WhatsApp to start your custom order.</small></div>
-          <article class="floating-review review-left"><p id="review-quote">“The frame felt like the final touch our picture was waiting for.”</p><span id="review-label">READY FOR YOUR REAL REVIEWS</span></article>
-          <article class="floating-review review-right"><p>Real customer photos and verified review cards can be added here when you share them.</p></article>
+          <div class="customer-review-slot review-slot-top" data-review-slot="custom-top" hidden></div>
+          <div class="customer-review-slot review-slot-bottom" data-review-slot="custom-bottom" hidden></div>
         </div>
         <div class="custom-process"><div><span>01</span><p>Share your photo</p></div><div><span>02</span><p>Choose your style</p></div><div><span>03</span><p>We make it yours</p></div></div>
       </section>
@@ -100,7 +99,7 @@
 
     <div class="overlay" id="cart-overlay" aria-hidden="true">
       <button class="overlay-backdrop" type="button" data-close="cart" aria-label="Close shopping bag"></button>
-      <aside class="side-panel" aria-label="Shopping bag"><header class="panel-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping bag</h2></div><button class="close-button" type="button" data-close="cart" aria-label="Close">×</button></header><div class="cart-lines" id="cart-lines"></div><footer class="cart-footer"><div class="cart-total"><span>TOTAL</span><strong id="cart-total">₹0</strong></div><p>Delivery details are collected at checkout.</p><button class="primary-button full-button" id="begin-checkout" type="button">CONTINUE TO PAYMENT</button></footer></aside>
+      <aside class="side-panel" aria-label="Shopping bag"><header class="panel-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping bag</h2></div><button class="close-button" type="button" data-close="cart" aria-label="Close">×</button></header><div class="cart-lines" id="cart-lines"></div><footer class="cart-footer"><div class="cart-total"><span>FRAME TOTAL</span><strong id="cart-total">₹0</strong></div><p>Photo print included. Free delivery in Jhansi; other-city delivery charges are confirmed on WhatsApp before payment.</p><button class="primary-button full-button" id="begin-checkout" type="button">CONTINUE TO CHECKOUT</button></footer></aside>
     </div>
 
     <div class="overlay" id="checkout-overlay" aria-hidden="true">

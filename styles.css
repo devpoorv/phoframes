@@ -41,3 +41,38 @@
 @media (prefers-reduced-motion: reduce) {
   #story-line { animation: none; }
 }
+
+/* Checkout recovery and clear, manual payment confirmation. */
+.cover-picker{display:flex;flex-direction:column;gap:.5rem;margin:1rem 0;color:var(--gold);font-size:.75rem;line-height:1.5;letter-spacing:.05em}
+.cover-picker select{width:100%;min-width:0;min-height:44px;padding:.6rem;border:1px solid var(--line);border-radius:0;background:#18150f;color:var(--ivory);font:inherit;font-size:.9rem;letter-spacing:normal}
+.delivery-summary{padding:1rem;border:1px solid var(--line);background:rgba(239,204,135,.06);font-size:.88rem;color:var(--ivory);line-height:1.7;overflow-wrap:anywhere}
+.delivery-summary p{margin:0 0 .6rem}.delivery-summary p:last-child{margin-bottom:0}.payment-stage>.delivery-summary{margin:1rem 0 1.5rem}
+.real-frame{background:#000}
+.checkout-text-button{display:block;min-height:44px;margin:.7rem auto 0;padding:.5rem .7rem;border:0;background:transparent;color:var(--gold);font-size:.75rem;line-height:1.5;text-decoration:underline;text-underline-offset:.25rem;cursor:pointer}
+.verification-status{justify-content:center;max-width:100%;font-size:.75rem;line-height:1.7;letter-spacing:.1em}
+.photo-included{margin:.5rem 0 1rem;color:var(--gold);font-size:.78rem;line-height:1.6}
+.payment-stage .manual-note,.celebration-stage .manual-note{font-size:.8rem;line-height:1.75;color:#b8a98e;max-width:25rem}
+.checkout-form .secure-note{font-size:.78rem;line-height:1.65}
+.payment-stage .primary-button,.celebration-stage .primary-button{white-space:normal;line-height:1.5;text-align:center}
+.paid-button{min-height:44px;line-height:1.6;padding:.6rem .25rem}
+@media(max-width:720px){.checkout-form input,.checkout-form textarea{font-size:1rem}.celebration-stage h3{font-size:clamp(2rem,8.5vw,2.8rem);line-height:1.15}.verification-status{letter-spacing:.06em}}
+
+/* Real reviews occupy their own space, so mobile controls remain unobstructed. */
+.customer-review-slot[hidden]{display:none!important}
+.customer-review-slot{width:min(22rem,100%);max-width:100%;padding:.75rem 0;z-index:2;grid-column:1/-1}
+.customer-review-card{padding:1rem 1.15rem;border:1px solid var(--line);background:rgba(24,20,14,.92);border-radius:.35rem;overflow-wrap:anywhere;animation:customer-review-arrival 10s ease-in-out infinite both}
+.customer-review-card p{margin:.5rem 0;color:var(--ivory);font-family:var(--display);font-size:1rem;font-style:italic;line-height:1.65}
+.customer-review-stars{display:block;color:var(--gold);font-size:1rem;letter-spacing:.1em}
+.customer-review-author{display:block;margin-top:.6rem;color:var(--muted);font-size:.85rem;line-height:1.5}
+.review-slot-top{--review-enter:-.7rem;--review-exit:.3rem;align-self:flex-start;justify-self:start;order:-1}
+.review-slot-bottom{--review-enter:.7rem;--review-exit:-.3rem;align-self:flex-end;justify-self:end;order:3}
+.review-slot-bottom .customer-review-card{animation-delay:5s}
+.intro-screen.is-active.has-customer-reviews{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding-bottom:2rem}
+.intro-screen.has-customer-reviews .intro-brand{order:1}
+.intro-screen.has-customer-reviews .explore-button{position:relative;left:auto;bottom:auto;order:4;transform:none;margin-top:1rem;flex-shrink:0}
+.intro-screen.has-customer-reviews .explore-button:hover{transform:translateY(-2px)}
+.custom-screen.has-customer-reviews .custom-stage{row-gap:1rem}
+.custom-screen.has-customer-reviews .custom-frame,.custom-screen.has-customer-reviews .custom-copy{order:1}
+@keyframes customer-review-arrival{0%{opacity:0;transform:translateY(var(--review-enter))}15%,75%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(var(--review-exit))}}
+@media(max-width:720px){.customer-review-slot{width:min(20rem,94%)}.customer-review-card{padding:.9rem 1rem}.custom-screen.has-customer-reviews .custom-copy{order:0}.custom-screen.has-customer-reviews .custom-frame{order:1}}
+@media(prefers-reduced-motion:reduce){.customer-review-card{animation:none}}
