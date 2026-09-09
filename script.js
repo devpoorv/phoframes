@@ -5,10 +5,13 @@ const UPI_ID = '6393556640@okbizaxis';
 const sizes = ['A4', 'A3', '12 × 18', '13 × 19', '20 × 30'];
 const prices = { A4: 149, A3: 199, '12 × 18': 249, '13 × 19': 299, '20 × 30': 799 };
 const products = [
-  { id: 'obsidian', name: 'Obsidian Gallery', tone: 'black', category: 'Signature black', note: 'Matte black finish · 20 mm profile' },
-  { id: 'aurum', name: 'Aurum Halo', tone: 'gold', category: 'Golden frame', note: 'Brushed gold finish · museum edge' },
-  { id: 'heritage', name: 'Heritage Walnut', tone: 'walnut', category: 'Wooden frame', note: 'Warm walnut grain · hand-finished look' },
-  { id: 'ivory', name: 'Ivory Studio', tone: 'ivory', category: 'Minimal frame', note: 'Soft ivory finish · clean architectural line' },
+  { id: 'ivory-gold', name: 'Ivory Gold', image: 'ivory-gold.png', category: 'Ivory & gold', note: 'Ivory finish with a luminous gold inlay' },
+  { id: 'pearl-oak', name: 'Pearl Oak', image: 'pearl-oak.png', category: 'Oak & pearl', note: 'Warm oak grain with a pearl-white border' },
+  { id: 'royal-walnut', name: 'Royal Walnut', image: 'royal-walnut.png', category: 'Dark walnut', note: 'Deep walnut grain with a refined inner edge' },
+  { id: 'black-marble', name: 'Black Marble', image: 'black-marble.png', category: 'Statement black', note: 'Black marble effect with bright natural veining' },
+  { id: 'classic-oak', name: 'Classic Oak', image: 'classic-oak.png', category: 'Classic wood', note: 'Natural oak finish with a dark inner profile' },
+  { id: 'dark-oak', name: 'Dark Oak', image: 'dark-oak.png', category: 'Rich wood', note: 'Dark oak finish with a sleek black inner edge' },
+  { id: 'featured-oak', name: 'Featured Oak', image: 'featured-oak.png', category: 'Featured collection', note: 'Statement oak grain with a polished black inner profile' },
 ];
 
 const stories = [
@@ -25,7 +28,7 @@ const reviews = [
 
 let selectedSizes = Object.fromEntries(products.map((product) => [product.id, 'A4']));
 let cart = loadCart();
-let carouselIndex = 0;
+let carouselIndex = products.findIndex((product) => product.id === 'featured-oak');
 let checkoutLines = [];
 let customerDetails = { name: '', phone: '', address: '' };
 
@@ -48,6 +51,9 @@ function saveCart() {
 }
 
 function frameVisual(product, label = '') {
+  if (product.image) {
+    return `<div class="real-frame"><img src="${product.image}" alt="${product.name} frame">${label ? `<span class="real-frame-label">${label}</span>` : ''}</div>`;
+  }
   return `<div class="frame-visual frame-${product.tone}"><div class="frame-matte"><div class="frame-art">${label ? `<span class="frame-label">${label}</span>` : ''}</div></div></div>`;
 }
 
