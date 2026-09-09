@@ -135,7 +135,7 @@ function goTo(view) {
 function renderHero() {
   const product = products[carouselIndex];
   const size = selectedSizes[product.id];
-  $('#featured-frame').innerHTML = frameVisual(product, product.category);
+  $('#featured-frame').innerHTML = frameVisual(product, product.name);
   $('#carousel-index').textContent = `${String(carouselIndex + 1).padStart(2, '0')} / ${String(products.length).padStart(2, '0')}`;
   $('#hero-size-strip').innerHTML = sizes.map((item) => `<span>${item} · ${money(priceFor(item))}</span>`).join('');
   $('#hero-size-picker').innerHTML = sizes.map((item) => `<button type="button" class="${item === size ? 'is-selected' : ''}" data-size="${item}" data-product="${product.id}">${item}</button>`).join('');
@@ -151,10 +151,10 @@ function renderProducts() {
   $('#product-grid').innerHTML = products.map((product) => {
     const selected = selectedSizes[product.id];
     return `<article class="product-card">
-      <div class="product-art">${frameVisual(product, product.category)}</div>
+      <div class="product-art">${frameVisual(product)}</div>
       <div class="product-copy"><div><p>${product.category}</p><h3>${product.name}</h3></div><strong>${money(priceFor(selected))}</strong></div>
       <p class="product-note">${product.note}</p>
-      <p class="photo-included">Photo print included · Share your photo on WhatsApp.</p>
+      <p class="photo-included">Photo print included · Select photo size below.</p>
       <div class="size-picker" aria-label="Choose ${product.name} size">${sizes.map((size) => `<button type="button" class="${size === selected ? 'is-selected' : ''}" data-size="${size}" data-product="${product.id}">${size}</button>`).join('')}</div>
       ${coverPicker(product)}
       <div class="product-actions"><button class="add-button" type="button" data-add="${product.id}">ADD TO BAG</button><button class="buy-button" type="button" data-buy="${product.id}">BUY NOW</button></div>

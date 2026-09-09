@@ -76,3 +76,18 @@
 @keyframes customer-review-arrival{0%{opacity:0;transform:translateY(var(--review-enter))}15%,75%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(var(--review-exit))}}
 @media(max-width:720px){.customer-review-slot{width:min(20rem,94%)}.customer-review-card{padding:.9rem 1rem}.custom-screen.has-customer-reviews .custom-copy{order:0}.custom-screen.has-customer-reviews .custom-frame{order:1}}
 @media(prefers-reduced-motion:reduce){.customer-review-card{animation:none}}
+
+/* One quiet review beneath the main action, with room for the full quote. */
+.review-slot-single{--review-enter:.35rem;--review-exit:-.25rem;order:5;align-self:center;justify-self:center;width:min(23rem,100%);margin:1.25rem auto 0;padding:0;min-height:16rem}
+.review-slot-single .customer-review-card{padding:1rem 1.15rem;background:rgba(24,20,14,.45);border:0;border-top:1px solid var(--line);border-radius:0;animation-duration:14s;text-align:center}
+.review-slot-single .customer-review-card p{font-size:.9rem;line-height:1.75}
+.review-slot-single .customer-review-author{font-size:.75rem}
+.review-slot-single .customer-review-stars{font-size:.8rem}
+.size-guide{max-width:30rem;color:#b8a98e;font-size:.78rem;line-height:1.7;letter-spacing:normal}
+.social-footer{position:relative;z-index:2;padding:1.5rem 1.25rem 2rem;text-align:center;border-top:1px solid var(--line)}
+.social-footer a{display:inline-flex;max-width:100%;min-height:44px;flex-direction:column;gap:.55rem;color:var(--ivory);font-size:.8rem;line-height:1.7;text-decoration:none;overflow-wrap:anywhere}
+.social-footer span{font-size:.6rem;letter-spacing:.16em;color:#b8a98e}.social-footer b{font-weight:500;color:var(--gold)}
+.social-footer a:hover b{text-decoration:underline;text-underline-offset:.25rem}
+.social-footer a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:720px){.review-slot-single{width:min(21rem,100%);margin-top:1.1rem;min-height:17rem}.review-slot-single .customer-review-card{padding:1rem .65rem}.intro-screen.is-active.has-customer-reviews{gap:.25rem}.custom-screen.has-customer-reviews .review-slot-single{order:3}.size-guide{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.review-slot-single .customer-review-card{animation:none}}
